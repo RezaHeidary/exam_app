@@ -3,6 +3,8 @@ import 'package:exam_app/modules/home/controller/home_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import '../../../value/str.dart';
+
 class HomeNavWidget {
   HomeNavWidget._();
   static var homeController = Get.find<HomeController>();
@@ -16,11 +18,11 @@ class HomeNavWidget {
       backgroundColor: Theme.of(context).bottomAppBarTheme.color!,
       onTap: (index) {
         if (index == 0) {
-          homeController.titelAppbar.value = "خانه";
+          homeController.titelAppbar.value = MyString.appBarHome;
         } else if (index == 1) {
-          homeController.titelAppbar.value = "ازمون های انجام شده";
+          homeController.titelAppbar.value = MyString.appBarListResult;
         } else if (index == 2) {
-          homeController.titelAppbar.value = "پروفایل";
+          homeController.titelAppbar.value = MyString.appBarProFile;
         }
         homeController.pageIndex.value = index;
       },

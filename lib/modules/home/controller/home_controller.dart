@@ -1,4 +1,5 @@
 import 'package:exam_app/core/theme/theme.dart';
+import 'package:exam_app/value/str.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
@@ -19,7 +20,7 @@ class HomeController extends GetxController {
 
   //
 
-  var titelAppbar = "خانه".obs;
+  var titelAppbar = MyString.appBarHome.obs;
 
   GetStorage getStorage = GetStorage();
 

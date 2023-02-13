@@ -16,5 +16,8 @@ class MyString {
   static String resultTitel = "نتیجه آزمون";
   static String btnStarViewNext = "بعدی";
   static String btnStartViewBack = "قبلی";
+  static String appBarHome = "خانه";
+  static String appBarListResult = "ازمون های انجام شده";
   static String btnEndViewNext = "اتمام ازمون";
+  static String appBarProFile = "پروفایل";
 }
