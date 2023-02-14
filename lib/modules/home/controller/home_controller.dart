@@ -1,5 +1,5 @@
 import 'package:exam_app/core/theme/theme.dart';
-import 'package:exam_app/value/str.dart';
+import 'package:exam_app/core/value/str.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
@@ -9,10 +9,10 @@ class HomeController extends GetxController {
   var themeIndex = 0.obs;
 
   //user view
-  var textNameEditingController = TextEditingController();
-  var textLastNameEditingController = TextEditingController();
-  var textCodeEditingController = TextEditingController();
-  var textPasswodrEditingController = TextEditingController();
+  // var textNameEditingController = TextEditingController();
+  // var textLastNameEditingController = TextEditingController();
+  // var textCodeEditingController = TextEditingController();
+  // var textPasswodrEditingController = TextEditingController();
   var nameUser = "Name".obs;
   var lastNameUser = "Last Name".obs;
   var codeUser = "Code".obs;
@@ -35,6 +35,8 @@ class HomeController extends GetxController {
     Get.changeTheme(Themes.darkTheme);
     getStorage.write("theme", "dark");
   }
+
+  getTextFildeForUser(String keyName, text) {}
 
   @override
   void onInit() {

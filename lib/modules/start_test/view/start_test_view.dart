@@ -1,6 +1,6 @@
 import 'package:exam_app/core/theme/style.dart';
 import 'package:exam_app/route/pages.dart';
-import 'package:exam_app/value/str.dart';
+import 'package:exam_app/core/value/str.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

@@ -10,4 +10,8 @@ class MatrialAppService extends GetxService {
         ? Themes.darkTheme
         : Themes.lightTheme;
   }
+
+  Future getInit() async {
+    await GetStorage.init();
+  }
 }

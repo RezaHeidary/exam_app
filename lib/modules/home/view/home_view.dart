@@ -5,7 +5,7 @@ import 'package:exam_app/modules/home/view/user_view.dart';
 import 'package:exam_app/modules/home/widget/drawer_home_widget.dart';
 import 'package:exam_app/modules/home/widget/home_nav.dart';
 import 'package:exam_app/modules/home/widget/home_widget.dart';
-import 'package:exam_app/value/str.dart';
+import 'package:exam_app/core/value/str.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

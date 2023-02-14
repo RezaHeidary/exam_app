@@ -1,6 +1,5 @@
 import 'package:exam_app/modules/home/controller/home_controller.dart';
-import 'package:exam_app/modules/home/widget/user/user_modal_widget.dart';
-import 'package:exam_app/modules/home/widget/user/user_widget.dart';
+import 'package:exam_app/modules/home/widget/user/modal_and_input.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -11,48 +10,27 @@ class UserView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Obx(
-        () => SingleChildScrollView(
-          child: SizedBox(
-            width: Get.width,
-            height: Get.height,
-            child: Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  Image.asset(
-                    "assets/images/user.png",
-                    scale: 5,
-                  ),
-                  GestureDetector(
-                      onTap: () {
-                        UserModalWidget.showDialogName();
-                      },
-                      child: UserWidget.widgetUser(
-                          homeController.nameUser.value, context)),
-                  GestureDetector(
-                      onTap: () {
-                        UserModalWidget.showDialogLastName();
-                      },
-                      child: UserWidget.widgetUser(
-                          homeController.lastNameUser.value, context)),
-                  GestureDetector(
-                      onTap: () {
-                        UserModalWidget.showDialogCode();
-                      },
-                      child: UserWidget.widgetUser(
-                          homeController.codeUser.value, context)),
-                  GestureDetector(
-                      onTap: () {
-                        UserModalWidget.showDialogPass();
-                      },
-                      child: UserWidget.widgetUser(
-                          homeController.passUser.value, context)),
-                  const SizedBox(
-                    height: 25,
-                  )
-                ]),
-          ),
+      body: SingleChildScrollView(
+        child: SizedBox(
+          width: Get.width,
+          height: Get.height,
+          child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                Image.asset(
+                  "assets/images/user.png",
+                  scale: 5,
+                ),
+                EditUserWidget(keyName: "Name", name: homeController.nameUser),
+                EditUserWidget(
+                    keyName: "LastName", name: homeController.lastNameUser),
+                EditUserWidget(keyName: "Code", name: homeController.codeUser),
+                EditUserWidget(keyName: "Pass", name: homeController.passUser),
+                const SizedBox(
+                  height: 25,
+                )
+              ]),
         ),
       ),
       floatingActionButton: Padding(

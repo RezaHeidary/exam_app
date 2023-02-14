@@ -1,6 +1,5 @@
-import 'package:exam_app/core/theme/theme.dart';
 import 'package:exam_app/modules/home/controller/home_controller.dart';
-import 'package:exam_app/value/str.dart';
+import 'package:exam_app/core/value/str.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

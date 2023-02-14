@@ -1,5 +1,5 @@
 import 'package:exam_app/core/theme/style.dart';
-import 'package:exam_app/value/str.dart';
+import 'package:exam_app/core/value/str.dart';
 import 'package:flutter/material.dart';
 import '../widget/login_widget.dart';
 
