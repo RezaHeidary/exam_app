@@ -9,10 +9,10 @@ class HomeController extends GetxController {
   var themeIndex = 0.obs;
 
   //user view
-  var textNameEditingController = TextEditingController().obs;
-  var textLastNameEditingController = TextEditingController().obs;
-  var textCodeEditingController = TextEditingController().obs;
-  var textPasswodrEditingController = TextEditingController().obs;
+  var textNameEditingController = TextEditingController();
+  var textLastNameEditingController = TextEditingController();
+  var textCodeEditingController = TextEditingController();
+  var textPasswodrEditingController = TextEditingController();
   var nameUser = "Name".obs;
   var lastNameUser = "Last Name".obs;
   var codeUser = "Code".obs;

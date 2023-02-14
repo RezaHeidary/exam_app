@@ -14,18 +14,17 @@ class UserModalWidget {
         content: Padding(
           padding: const EdgeInsets.all(8.0),
           child: TextField(
-            controller: homeController.textNameEditingController.value,
+            controller: homeController.textNameEditingController,
             decoration:
                 InputDecoration(hintText: MyString.editTextBoxUserModal),
           ),
         ),
         confirm: TextButton(
             onPressed: () {
-              homeController.textNameEditingController.update((val) {
-                if (val!.text.isNotEmpty) {
-                  homeController.nameUser.value = val.text;
-                }
-              });
+              homeController.nameUser.value =
+                  homeController.textNameEditingController.text;
+              homeController.update();
+
               Get.back();
             },
             child: Text(MyString.editBtnUserModal)));
@@ -37,18 +36,17 @@ class UserModalWidget {
         content: Padding(
           padding: const EdgeInsets.all(8.0),
           child: TextField(
-            controller: homeController.textPasswodrEditingController.value,
+            controller: homeController.textPasswodrEditingController,
             decoration:
                 InputDecoration(hintText: MyString.editTextBoxUserModal),
           ),
         ),
         confirm: TextButton(
             onPressed: () {
-              homeController.textPasswodrEditingController.update((val) {
-                if (val!.text.isNotEmpty) {
-                  homeController.passUser.value = val.text;
-                }
-              });
+              homeController.passUser.value =
+                  homeController.textPasswodrEditingController.text;
+              homeController.update();
+
               Get.back();
             },
             child: Text(MyString.editBtnUserModal)));
@@ -60,18 +58,17 @@ class UserModalWidget {
         content: Padding(
           padding: const EdgeInsets.all(8.0),
           child: TextField(
-            controller: homeController.textLastNameEditingController.value,
+            controller: homeController.textLastNameEditingController,
             decoration:
                 InputDecoration(hintText: MyString.editTextBoxUserModal),
           ),
         ),
         confirm: TextButton(
             onPressed: () {
-              homeController.textLastNameEditingController.update((val) {
-                if (val!.text.isNotEmpty) {
-                  homeController.lastNameUser.value = val.text;
-                }
-              });
+              homeController.lastNameUser.value =
+                  homeController.textLastNameEditingController.text;
+
+              homeController.update();
 
               Get.back();
             },
@@ -84,18 +81,16 @@ class UserModalWidget {
         content: Padding(
           padding: const EdgeInsets.all(8.0),
           child: TextField(
-            controller: homeController.textCodeEditingController.value,
+            controller: homeController.textCodeEditingController,
             decoration:
                 InputDecoration(hintText: MyString.editTextBoxUserModal),
           ),
         ),
         confirm: TextButton(
             onPressed: () {
-              homeController.textCodeEditingController.update((val) {
-                if (val!.text.isNotEmpty) {
-                  homeController.codeUser.value = val.text;
-                }
-              });
+              homeController.codeUser.value =
+                  homeController.textCodeEditingController.text;
+              homeController.update();
 
               Get.back();
             },

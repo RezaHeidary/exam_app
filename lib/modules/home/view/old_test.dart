@@ -22,16 +22,22 @@ class OldTestView extends StatelessWidget {
                       borderRadius: BorderRadius.circular(4),
                       child: Obx(
                         () => Container(
-                          height: Get.height / 12,
                           width: Get.width,
                           decoration: BoxDecoration(
                               color: theme.value,
                               borderRadius: BorderRadius.circular(4)),
                           child: Padding(
                             padding: const EdgeInsets.all(14),
-                            child: Text(
-                              "Title",
-                              style: Theme.of(context).textTheme.titleLarge,
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Text(
+                                  "Title",
+                                  style:
+                                      Theme.of(context).textTheme.titleMedium,
+                                ),
+                                const Icon(Icons.arrow_forward_ios)
+                              ],
                             ),
                           ),
                         ),
